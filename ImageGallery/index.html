@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="hero">
+            <h1>Image Gallery</h1>
+            <p class="intro">Browse a curated collection of nature, city, and animal photography with soft lighting, refined card styling, and interactive controls.</p>
+        </div>
+
+        <div class="controls">
+            <div class="buttons" role="group" aria-label="Filter images">
+                <button type="button" data-category="all" class="active" onclick="filterImages('all')">All</button>
+                <button type="button" data-category="nature" onclick="filterImages('nature')">Nature</button>
+                <button type="button" data-category="city" onclick="filterImages('city')">City</button>
+                <button type="button" data-category="animal" onclick="filterImages('animal')">Animals</button>
+            </div>
+
+            <div class="theme-controls">
+                <button type="button" id="theme-default" class="active">Navy • Coral</button>
+                <button type="button" id="theme-alt">Teal • Gold</button>
+
+                <label for="bg-select" class="visually-hidden">Background</label>
+                <select id="bg-select" aria-label="Background color">
+                    <option value="light">Light</option>
+                    <option value="soft">Soft</option>
+                    <option value="dark">Dark</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <div class="gallery">
+
+        <!-- Nature -->
+
+        <figure class="image nature">
+            <img src="images/nature1.jpeg" alt="Sunset Over Lake">
+            <figcaption>
+                <h3>Mountain Peak</h3>
+                <p>Snow-capped summit under clear sky.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image nature">
+            <img src="images/nature2.jpeg" alt="Misty Forest">
+            <figcaption>
+                <h3>Misty Forest</h3>
+                <p>Soft morning mist among tall pines.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image nature">
+            <img src="images/nature3.jpeg" alt="Mountain Peak">
+            <figcaption>
+                <h3>Sunset Over Lake</h3>
+                <p>Warm hues reflecting on tranquil water.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image nature">
+            <img src="images/nature4.jpeg" alt="River Bend">
+            <figcaption>
+                <h3>River Bend</h3>
+                <p>Gentle river winding through valley.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image nature">
+            <img src="images/nature5.jpeg" alt="Blooming Meadow">
+            <figcaption>
+                <h3>Emerald Quarry Lake</h3>
+                <p>Turquoise waters surrounded by rocky cliffs.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image nature">
+            <img src="images/nature6.jpeg" alt="Coastal Cliffs">
+            <figcaption>
+                <h3>Blooming Meadow</h3>
+                <p>Colorful greenplants across open field.</p>
+            </figcaption>
+        </figure>
+
+        <!-- City -->
+
+        <figure class="image city">
+            <img src="images/city1.jpeg" alt="Downtown Skyline">
+            <figcaption>
+                <h3>Downtown Skyline</h3>
+                <p>Modern skyline with reflective skyscrapers.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image city">
+            <img src="images/city2.jpeg" alt="Historic Street">
+            <figcaption>
+                <h3>Historic Street</h3>
+                <p>Cobblestone road lined with old buildings.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image city">
+            <img src="images/city3.jpeg" alt="City Bridge">
+            <figcaption>
+                <h3>City Bridge</h3>
+                <p>Arched bridge spanning the urban river.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image city">
+            <img src="images/city4.jpeg" alt="Night Traffic">
+            <figcaption>
+                <h3>Night Traffic</h3>
+                <p>Long exposure lights across busy avenue.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image city">
+            <img src="images/city5.jpeg" alt="Riverside Promenade">
+            <figcaption>
+                <h3>Riverside Promenade</h3>
+                <p>Walkway along the calming riverfront.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image city">
+            <img src="images/city6.jpeg" alt="Skyscraper Glass">
+            <figcaption>
+                <h3>Skyscraper Glass</h3>
+                <p>Glass tower reflecting the cityscape.</p>
+            </figcaption>
+        </figure>
+
+        <!-- Animals -->
+
+        <figure class="image animal">
+            <img src="images/animal1.jpeg" alt="Red Fox">
+            <figcaption>
+                <h3>Red Panda</h3>
+                <p>Curious red panda among bamboo leaves.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image animal">
+            <img src="images/animal2.jpeg" alt="Humpback Whale">
+            <figcaption>
+                <h3>Snow Leopard</h3>
+                <p>Rare snow leopard in mountain wilderness.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image animal">
+            <img src="images/animal3.jpeg" alt="Snowy Owl">
+            <figcaption>
+                <h3>Dolphin</h3>
+                <p>Playful dolphin leaping through sunset waters.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image animal">
+            <img src="images/animal4.jpeg" alt="African Elephant">
+            <figcaption>
+                <h3>Sea Turtle</h3>
+                <p>Graceful sea turtle above coral reefs.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image animal">
+            <img src="images/animal5.jpeg" alt="Golden Retriever">
+            <figcaption>
+                <h3>Arctic Fox</h3>
+                <p>Elegant arctic fox in snowy landscapes.</p>
+            </figcaption>
+        </figure>
+
+        <figure class="image animal">
+            <img src="images/animal6.jpeg" alt="Tropical Parrot">
+            <figcaption>
+                <h3>Macaw Parrot</h3>
+                <p>Vibrant macaw perched in tropical forests.</p>
+            </figcaption>
+        </figure>
+
+    </div>
+
+    <!-- Lightbox -->
+
+    <div id="lightbox">
+
+        <span class="close">&times;</span>
+
+        <button id="prev">&#10094;</button>
+
+        <img id="lightbox-img" src="" alt="">
+
+        <button id="next">&#10095;</button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
