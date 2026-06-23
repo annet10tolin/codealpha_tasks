@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <section class="calculator">
+            <header class="calculator__header">
+                <div>
+                    <p class="eyebrow">Precision Engine</p>
+                    <h1>Quantum Calculator</h1>
+                </div>
+                <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">LIGHT</button>
+            </header>
+
+            <div class="display-panel">
+                <div id="formula" class="formula">0</div>
+                <input id="display" class="display" type="text" value="0" readonly aria-label="Calculator display">
+            </div>
+
+            <div class="button-grid">
+                <button class="secondary" onclick="setFunction('sqrt(')">√</button>
+                <button class="secondary" onclick="appendValue('(')">(</button>
+                <button class="secondary" onclick="appendValue(')')">)</button>
+                <button class="operator" onclick="clearDisplay()">C</button>
+
+                <button class="secondary" onclick="appendValue('pi')">π</button>
+                <button class="secondary" onclick="appendValue('e')">e</button>
+                <button class="secondary" onclick="setFunction('^2')">x²</button>
+                <button class="operator" onclick="appendValue('^')">^</button>
+
+                <button onclick="appendValue('7')">7</button>
+                <button onclick="appendValue('8')">8</button>
+                <button onclick="appendValue('9')">9</button>
+                <button class="operator" onclick="appendValue('/')">÷</button>
+
+                <button onclick="appendValue('4')">4</button>
+                <button onclick="appendValue('5')">5</button>
+                <button onclick="appendValue('6')">6</button>
+                <button class="operator" onclick="appendValue('*')">×</button>
+
+                <button onclick="appendValue('1')">1</button>
+                <button onclick="appendValue('2')">2</button>
+                <button onclick="appendValue('3')">3</button>
+                <button class="operator" onclick="appendValue('-')">−</button>
+
+                <button onclick="appendValue('0')" class="zero">0</button>
+                <button onclick="appendValue('.')">.</button>
+                <button class="operator" onclick="appendValue('%')">%</button>
+                <button class="operator" onclick="appendValue('+')">+</button>
+
+                <button class="function" onclick="setFunction('sin(')">sin</button>
+                <button class="function" onclick="setFunction('cos(')">cos</button>
+                <button class="function" onclick="setFunction('tan(')">tan</button>
+                <button class="equal" onclick="calculate()">=</button>
+            </div>
+        </section>
+
+        <aside class="history-panel">
+            <div class="history-header">
+                <div>
+                    <p class="eyebrow">Calculation</p>
+                    <h2>History</h2>
+                </div>
+                <button type="button" class="clear-history" onclick="clearHistory()">Clear</button>
+            </div>
+            <ul id="historyList" class="history-list"></ul>
+        </aside>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
